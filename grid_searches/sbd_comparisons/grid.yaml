@@ -1,0 +1,46 @@
+###BetaTCVAE - with sbd
+-   data:
+        name: [cars3d]
+    train:
+        epochs: [1000]
+        checkpoint_every: [100]
+        seed: [0, 1, 2, 3, 4]
+        lr: [0.001, 0.0001]
+        loss: [betatcvae]
+    betatcvae:
+        beta: [6]
+    model:
+        name: vae_locatello_sbd
+-   data:
+        name: [shapes3d]
+    train:
+        epochs: [50]
+        checkpoint_every: [10]
+        seed: [0, 1, 2, 3, 4]
+        lr: [0.001, 0.0001]
+        loss: [betatcvae]
+    betatcvae:
+        beta: [6]
+    model:
+        name: vae_locatello_sbd        
+###BetaTCVAE - without spatial broadcasting decoder.
+-   data:
+        name: [cars3d]
+    train:
+        epochs: [1000]
+        checkpoint_every: [100]
+        seed: [0, 1, 2, 3, 4]
+        lr: [0.001, 0.0001]
+        loss: [betatcvae]
+    betatcvae:
+        beta: [6]
+-   data:
+        name: [shapes3d]
+    train:
+        epochs: [50]
+        checkpoint_every: [10]
+        seed: [0, 1, 2, 3, 4]
+        lr: [0.001, 0.0001]
+        loss: [betatcvae]
+    betatcvae:
+        beta: [6]

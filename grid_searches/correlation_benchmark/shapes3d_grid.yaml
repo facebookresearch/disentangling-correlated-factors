@@ -1,0 +1,219 @@
+##################################### Shapes-3D
+################ Baselines.
+### BetaVAE
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: betavae
+    betavae:
+        beta: [1, 2, 4, 6, 8, 10, 16]
+### BetaTCVAE
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: betatcvae
+    betatcvae:
+        beta: [1, 2, 4, 6, 8, 10, 16]
+### FactorVAE
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorvae
+    factorvae:
+        gamma: [5, 10, 25, 50, 75, 100, 150]
+### AnnealedVAE
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: annealedvae
+    annealedvae:
+        C_fin: [5, 10, 25, 50, 75, 100, 150]
+
+
+
+
+################ Hausdorff Factorized Support
+### Uses best HFS Setup for Shapes3D on Beta-VAE
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_hfs_joint'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupportvae
+    factorizedsupportvae:
+        beta: [0, 1, 2, 4, 6, 8, 10, 16]
+        gamma: [0.1, 1, 10, 100, 1000, 10000]  
+        matching: 'hausdorff_hard'             
+
+
+
+
+### Uses best hfs Setup for Shapes3D on Beta-VAE - refine around beta = 0
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_hfs_only'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupportvae
+    factorizedsupportvae:
+        beta: 0
+        gamma: [80, 200, 400, 800, 1200, 1400, 1600, 1800, 2000]  
+        matching: 'hausdorff_hard'        
+
+
+
+-   data:
+        name: shapes3d
+    log:
+        project: 'correlations_shapes3d_hfs_joint_betatcvae'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:shapes3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupporttcvae
+    factorizedsupportvae:
+        beta: [1, 2, 4, 6, 8, 10, 16]
+        gamma: [0.01, 0.1, 1, 10, 100, 1000, 10000]  
+        matching: 'hausdorff_hard'
+
+        
+
+        

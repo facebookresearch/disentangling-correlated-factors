@@ -1,0 +1,40 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: sample_dent_runs
+    group: adagvae_shapes3d
+    wandb_mode: run
+    level: info
+data:
+    name: shapes3d
+    num_workers: 8
+    k_range: [1,-1]
+train:
+    epochs: 50
+    lr: 0.0001
+    batch_size: 64
+    anneal_steps: 7000
+    checkpoint_every: 5
+    checkpoint_first: 1
+    loss: adagvae
+    rec_dist: bernoulli
+    supervision: pairs
+adagvae:
+    annealing: higgins
+    thresh_mode: kl
+    average_mode: gvae
+    thresh_ratio: 0.5
+    C_fin: 25
+    C_init: 0
+    gamma: 100
+    beta: 6
+    log_components: False
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024

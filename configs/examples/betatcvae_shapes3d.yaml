@@ -1,0 +1,28 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: sample_dent_runs
+    group: betatcvae_shapes3d
+    wandb_mode: run
+    level: info
+data:
+    num_workers: 12
+train:
+    lr: 0.0001
+    batch_size: 64
+    epochs: 400
+    checkpoint_every: 50
+    checkpoint_first: 2
+    loss: betatcvae
+    rec_dist: bernoulli
+    supervision: none
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024
+    mode: all #change to last if only most recent checkpoint should be evaluated.

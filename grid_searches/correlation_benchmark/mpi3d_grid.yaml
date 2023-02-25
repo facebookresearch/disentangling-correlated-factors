@@ -1,0 +1,209 @@
+##################################### MPI3D
+################ Baselines.
+### BetaVAE
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: betavae
+    betavae:
+        beta: [1, 2, 4, 6, 8, 10, 16, 32]
+### BetaTCVAE
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: betatcvae
+    betatcvae:
+        beta: [1, 2, 4, 6, 8, 10, 16, 32]
+### FactorVAE
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorvae
+    factorvae:
+        gamma: [5, 10, 20, 30, 40, 50, 100, 200]
+### AnnealedVAE
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_baselines'
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: annealedvae
+    annealedvae:
+        C_fin: [2, 5, 10, 25, 50, 75, 100, 200]
+
+
+
+
+################ Hausdorff Factorized Support
+### Uses best HFS Setup for MPI3D on Beta-VAE
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_hfs_joint'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupportvae
+    factorizedsupportvae:
+        beta: [0, 1, 2, 4, 6, 8, 10, 16, 32]
+        gamma: [0.1, 1, 10, 100, 1000, 10000]  
+        matching: 'hausdorff_hard'                
+
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_hfs_only'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupportvae
+    factorizedsupportvae:
+        beta: [0]
+        gamma: [80, 200, 400, 800, 1200, 1400, 1600, 1800, 2000]
+        matching: 'hausdorff_hard'           
+
+-   data:
+        name: mpi3d
+    log:
+        project: 'correlations_mpi3d_hfs_joint_betatcvae'        
+    constraints:
+        file: 'none'
+        correlations_file: [
+            'none',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_single_3_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_04',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_1_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_double_2_004',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_1_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_triple_2_01',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_1_02',
+            'iclr_grid_searches/avail_correlations.yaml:mpi3d_conf_2_02'
+        ]
+    train:
+        seed: '0-9'
+        loss: factorizedsupporttcvae
+    factorizedsupportvae:
+        beta: [1, 2, 4, 6, 8, 10, 16]
+        gamma: [0.01, 0.1, 1, 10, 100, 1000, 10000]  
+        matching: 'hausdorff_hard'

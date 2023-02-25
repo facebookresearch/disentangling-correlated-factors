@@ -1,0 +1,35 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: loc_weakly_repl
+    group: annealedvae
+    wandb_mode: run
+    level: info
+data:
+    name: shapes3d
+    num_workers: 12
+    k_range: [1,-1]
+train:
+    epochs: 50
+    lr: 0.0001
+    batch_size: 64
+    anneal_steps: 100000
+    checkpoint_every: 5
+    checkpoint_first: 1
+    loss: burgess
+    rec_dist: bernoulli
+    supervision: pairs
+burgess:
+    C_fin: 25
+    C_init: 0
+    gamma: 1000
+    log_components: False
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024

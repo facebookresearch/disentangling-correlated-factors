@@ -1,0 +1,231 @@
+###### No correlation.
+base:
+  correlations: []
+
+##### Shapes3D 
+# Single Correlation
+shapes3d_single_1_01:
+  correlations:
+    ('floorCol', 'wallCol'): 0.1    
+shapes3d_single_2_01:
+  correlations:
+    ('objType', 'objSize'): 0.1
+shapes3d_single_3_01:
+  correlations:
+    ('objType', 'wallCol'): 0.1            
+# Double Correlations
+shapes3d_double_1_01:
+  correlations:
+    ('objSize', 'floorCol'): 0.1
+    ('objType', 'wallCol'): 0.1
+shapes3d_double_2_01:
+  correlations:
+    ('objSize', 'objType'): 0.1
+    ('floorCol', 'wallCol'): 0.1   
+shapes3d_double_1_04:
+  correlations:
+    ('objSize', 'floorCol'): 0.4
+    ('objType', 'wallCol'): 0.4
+shapes3d_double_2_04:
+  correlations:
+    ('objSize', 'objType'): 0.4
+    ('floorCol', 'wallCol'): 0.4   
+shapes3d_double_1_004:
+  correlations:
+    ('objSize', 'floorCol'): 0.04
+    ('objType', 'wallCol'): 0.04
+shapes3d_double_2_004:
+  correlations:
+    ('objSize', 'objType'): 0.04
+    ('floorCol', 'wallCol'): 0.04   
+# Specific Correlations
+shapes3d_single_4_01:
+  correlations:
+    ('objType', 'objCol'): 0.1
+shapes3d_double_3_01:
+  correlations:
+    ('objType', 'objCol'): 0.1
+    ('objType', 'objSize'): 0.1
+# Triple Correlations
+shapes3d_triple_1_01:
+  correlations:
+    ('objSize', 'objAzimuth'): 0.1
+    ('objType', 'wallCol'): 0.1
+    ('objCol', 'floorCol'): 0.1
+shapes3d_triple_2_01:
+  correlations:
+    ('objCol', 'objAzimuth'): 0.1
+    ('objType', 'objSize'): 0.1
+    ('floorCol', 'wallCol'): 0.1 
+# Confounding Correlations
+shapes3d_conf_1_02:
+  correlations:
+    ('objType', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+shapes3d_conf_2_02:
+  correlations:
+    ('wallCol', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+
+
+
+
+
+
+##### MPI3D 
+# Single Correlation
+mpi3d_single_1_01:
+  correlations:
+    ('cameraHeight', 'backCol'): 0.1    
+mpi3d_single_2_01:
+  correlations:
+    ('objCol', 'objSize'): 0.1    
+mpi3d_single_3_01:
+  correlations:
+    ('posX', 'posY'): 0.1    
+# Double Correlations
+mpi3d_double_1_04:
+  correlations:
+    ('objCol', 'objShape'): 0.4
+    ('posX', 'posY'): 0.4
+mpi3d_double_2_04:
+  correlations:
+    ('objCol', 'posX'): 0.4
+    ('objShape', 'posY'): 0.4  
+mpi3d_double_1_01:
+  correlations:
+    ('objCol', 'objShape'): 0.1
+    ('posX', 'posY'): 0.1
+mpi3d_double_2_01:
+  correlations:
+    ('objCol', 'posX'): 0.1
+    ('objShape', 'posY'): 0.1
+mpi3d_double_1_004:
+  correlations:
+    ('objCol', 'objShape'): 0.04
+    ('posX', 'posY'): 0.04
+mpi3d_double_2_004:
+  correlations:
+    ('objCol', 'posX'): 0.04
+    ('objShape', 'posY'): 0.04         
+# Triple Correlations
+mpi3d_triple_1_01:
+  correlations:
+    ('objCol', 'backCol'): 0.1
+    ('cameraHeight', 'posX'): 0.1
+    ('objShape', 'posY'): 0.1
+mpi3d_triple_2_01:
+  correlations:
+    ('objCol', 'objShape'): 0.1
+    ('posX', 'posY'): 0.1
+    ('backCol', 'cameraHeight'): 0.1 
+# Confounding Correlations
+mpi3d_conf_1_02:
+  correlations:
+    ('objShape', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+mpi3d_conf_2_02:
+  correlations:
+    ('posX', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+
+
+
+
+
+##### DSprites 
+# Single Correlation
+dsprites_single_1_01:
+  correlations:
+    ('shape', 'scale'): 0.1    
+dsprites_single_2_01:
+  correlations:
+    ('posX', 'posY'): 0.1    
+dsprites_single_3_01:
+  correlations:
+    ('shape', 'posY'): 0.1        
+# Double Correlations
+dsprites_double_2_04:
+  correlations:
+    ('shape', 'scale'): 0.4
+    ('posX', 'posY'): 0.4
+dsprites_double_1_04:
+  correlations:
+    ('shape', 'posX'): 0.4
+    ('scale', 'posY'): 0.4
+dsprites_double_2_01:
+  correlations:
+    ('shape', 'scale'): 0.1
+    ('posX', 'posY'): 0.1
+dsprites_double_1_01:
+  correlations:
+    ('shape', 'posX'): 0.1
+    ('scale', 'posY'): 0.1    
+dsprites_double_2_004:
+  correlations:
+    ('shape', 'scale'): 0.04
+    ('posX', 'posY'): 0.04
+dsprites_double_1_004:
+  correlations:
+    ('shape', 'posX'): 0.04
+    ('scale', 'posY'): 0.04
+
+# Confounding Correlations
+dsprites_conf_1_02:
+  correlations:
+    ('shape', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+dsprites_conf_2_02:
+  correlations:
+    ('posX', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+
+
+
+##### DSprites
+dsprites_double_01:
+  correlations:
+    ('shape', 'scale'): 0.1
+    ('posX', 'posY'): 0.1
+dsprites_all_01:
+  correlations:
+    ('posX', 'random'): 0.1
+  repeat: ['count', 'max_num_single']
+
+
+
+
+
+##### Cars3D 
+# Single Correlation
+cars3d_single_1_02:
+  correlations:
+    ('elevation', 'azimuth'): 0.2    
+cars3d_single_2_02:
+  correlations:
+    ('elevation', 'object_type'): 0.2
+cars3d_single_3_02:
+  correlations:
+    ('azimuth', 'object_type'): 0.2     
+cars3d_single_1_01:
+  correlations:
+    ('elevation', 'azimuth'): 0.1    
+cars3d_single_2_01:
+  correlations:
+    ('elevation', 'object_type'): 0.1
+cars3d_single_3_01:
+  correlations:
+    ('azimuth', 'object_type'): 0.1            
+# Confounding Correlations
+cars3d_conf_1_02:
+  correlations:
+    ('elevation', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+cars3d_conf_2_02:
+  correlations:
+    ('azimuth', 'random'): 0.2
+  repeat: ['count', 'max_num_single']
+cars3d_conf_3_02:
+  correlations:
+    ('object_type', 'random'): 0.2
+  repeat: ['count', 'max_num_single']  

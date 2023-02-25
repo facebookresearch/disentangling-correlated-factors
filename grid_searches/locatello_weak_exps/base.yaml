@@ -1,0 +1,28 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: locatello_weak_disentanglement_replications
+    group: base
+    wandb_mode: run
+    level: info
+data:
+    num_workers: 12
+    k_range: [1,-1]
+train:
+    lr: 0.0001
+    batch_size: 64
+    checkpoint_every: 5
+    checkpoint_first: 1
+    loss: betavae
+    rec_dist: bernoulli
+    supervision: pairs
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024
+    mode: last

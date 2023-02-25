@@ -1,0 +1,28 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval']
+    gpu_id: 0
+log:
+    project: placeholder_project_name
+    group: base
+    wandb_mode: run
+    level: info
+data:
+    num_workers: 8
+train:
+    iterations: 300000
+    lr: 0.0001
+    batch_size: 64
+    checkpoint_every: 1000000
+    checkpoint_first: 0
+    loss: factorizedsupportvae
+    rec_dist: bernoulli
+    supervision: none
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024
+    mode: last

@@ -1,0 +1,27 @@
+name: dent
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python>=3.9
+  - pip=20.3
+  - cudatoolkit=11.3
+  - pytorch=1.12.1
+  - torchvision=0.13.1
+  - numpy=1.23.1
+  - scipy==1.10.0
+  - imageio==2.19.3
+  - scikit-image==0.19.3
+  - scikit-learn==1.2.1
+  - pandas==1.5.2
+  - seaborn==0.12.2
+  - Pillow==9.3.0
+  - pip:
+    - matplotlib
+    - fastargs==1.2.0
+    - timm
+    - wandb
+    - h5py
+    - terminaltables
+    - pyitlib
+    - -e .

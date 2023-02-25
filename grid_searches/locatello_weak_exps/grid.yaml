@@ -1,0 +1,191 @@
+###AdaGVAE
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        checkpoint_every: 100
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        beta: [2, 4, 6, 8, 10, 16]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        beta: [2, 4, 6, 8, 10, 16]
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        beta: [2, 4, 6, 8, 10, 16]        
+###AdaMLVAE
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        checkpoint_every: 100
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        average_mode: mlvae
+        beta: [2, 4, 6, 8, 10, 16]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        average_mode: mlvae
+        beta: [2, 4, 6, 8, 10, 16]
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        average_mode: mlvae
+        beta: [2, 4, 6, 8, 10, 16]        
+###FactorVae
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: factorvae
+    factorvae:
+        gamma: [10, 20, 30, 40, 50, 100]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: factorvae
+    factorvae:
+        gamma: [10, 20, 30, 40, 50, 100]
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: factorvae
+    factorvae:
+        gamma: [10, 20, 30, 40, 50, 100]        
+###BetaVae
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betavae
+    betavae:
+        beta: [1, 2, 4, 6, 8, 16]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betavae
+    betavae:
+        beta: [1, 2, 4, 6, 8, 16]
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betavae
+    betavae:
+        beta: [1, 2, 4, 6, 8, 16]        
+###AnnealedVae
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: annealedvae
+    annealedvae:
+        C_fin: [5, 10, 25, 50, 75, 100]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: annealedvae
+    annealedvae:
+        C_fin: [5, 10, 25, 50, 75, 100]
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: annealedvae
+    annealedvae:
+        C_fin: [5, 10, 25, 50, 75, 100]
+###BetaTCVae
+-   data:
+        name: cars3d
+    train:
+        epochs: 1000
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betatcvae
+    betatcvae:
+        beta: [1, 2, 4, 6, 8, 16]
+-   data:
+        name: shapes3d
+    train:
+        epochs: 50
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betatcvae
+    betatcvae:
+        beta: [1, 2, 4, 6, 8, 16]        
+-   data:
+        name: dsprites
+    train:
+        epochs: 26
+        checkpoint_every: 10
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betatcvae
+    betatcvae:
+        beta: [1, 2, 4, 6, 8, 16]            

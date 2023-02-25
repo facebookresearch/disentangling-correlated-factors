@@ -1,0 +1,122 @@
+###BetaVae
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betavae
+    betavae:
+        beta: [4, 8, 16, 24]       
+###BetaTCVAE
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betatcvae
+    betatcvae:
+        beta: [4, 8, 16, 24]           
+###AdaGVAE
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        beta: [4, 8, 16, 24]  
+###BetaVae
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betavae
+    betavae:
+        beta: [4, 8, 16, 24]       
+###BetaTCVAE
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: betatcvae
+    betatcvae:
+        beta: [4, 8, 16, 24]           
+###AdaGVAE
+-   data:
+        name: shapes3d
+    constraints:
+        file: [
+            constraints/montero.yaml:shapes3d_v1,
+            constraints/montero.yaml:shapes3d_v2,
+            constraints/montero.yaml:shapes3d_v3,
+            constraints/montero.yaml:shapes3d_v4,
+            constraints/montero.yaml:shapes3d_v5,
+            constraints/montero.yaml:shapes3d_v6,
+            constraints/montero.yaml:shapes3d_v7
+        ]
+    train:
+        epochs: 60
+        seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        lr: 0.0001
+        loss: adagvae
+        batch_size: 64
+    adagvae:
+        beta: [4, 8, 16, 24]

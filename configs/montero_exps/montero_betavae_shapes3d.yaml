@@ -1,0 +1,32 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: montero_model_rep
+    group: betavae_shapes3d
+    wandb_mode: run
+    level: info
+data:
+    name: shapes3d
+    num_workers: 12
+train:
+    epochs: 60
+    lr: 0.0001
+    batch_size: 64
+    checkpoint_every: 10
+    checkpoint_first: 1
+    loss: betavae
+    rec_dist: bernoulli
+betavae:
+    beta: 16
+    log_components: False
+model:
+    name: vae_montero_small
+constraints:
+    file: constraints/montero.yaml:shapes3d_v1
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024

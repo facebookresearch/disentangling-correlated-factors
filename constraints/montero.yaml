@@ -1,0 +1,73 @@
+shapes3d_v1:
+  constraints:
+    objType: ['==', 4/4.]
+    objCol: ['>=', 0.5]
+  connect: and
+#
+shapes3d_v2:
+  constraints:
+    floorCol: ['<', 0.25]
+    wallCol: ['>', 0.75]
+  connect: and
+#
+shapes3d_v3:
+  constraints:
+    objType: ['==', 4/4.]
+    wallCol: ['>', 0.75]
+  connect: and
+#
+shapes3d_v4:
+  constraints:
+    objType: ['==', 4/4.]
+    floorCol: ['<', 0.25]
+  connect: and
+#
+shapes3d_fair_v1:
+  constraints:
+    objType: ['==', 4/4.]
+    objCol: ['>=', 0.5]
+  connect: and
+#
+shapes3d_fair_v2:
+  constraints:
+    objType: ['==', 4/4.]
+    floorCol: ['>=', 0.5]
+  connect: and  
+#
+shapes3d_fair_v3:
+  constraints:
+    objType: ['==', 4/4.]
+    wallCol: ['>=', 0.5]
+  connect: and  
+#
+shapes3d_fair_v4:
+  constraints:
+    floorCol: ['>=', 0.5]
+    wallCol: ['>=', 0.5]
+  connect: and 
+#
+shapes3d_fair_v5:
+  constraints:
+    objType: ['==', 4/4.]
+    objSize: ['>=', 0.5]
+  connect: and 
+#
+shapes3d_fair_v6:
+  constraints:
+    objType: ['==', 4/4.]
+    objAzimuth: ['>=', 0.5]
+  connect: and 
+#    
+shapes3d_fair_v7:
+  constraints:
+    objCol: ['>=', 0.5]
+    wallCol: ['>=', 0.5]
+  connect: and        
+#
+dsprites_v1:
+  constraints:
+    shape: ['==', 3/3.]
+    posX: ['>=', 0.5] 
+  connect: and
+  
+    

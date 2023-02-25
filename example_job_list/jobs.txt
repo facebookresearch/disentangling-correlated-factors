@@ -1,0 +1,23 @@
+# Block 1
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0003 --train.seed=0 --train.lr=0.0003 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0001 --train.seed=0 --train.lr=0.0001 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.00003 --train.seed=0 --train.lr=0.00003 --train.epochs=400
+
+## Block 2
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0003 --train.seed=1 --train.lr=0.0003 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0001 --train.seed=1 --train.lr=0.0001 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.00003 --train.seed=1 --train.lr=0.00003 --train.epochs=400
+
+### Block 3
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0003 --train.seed=2 --train.lr=0.0003 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.0001 --train.seed=2 --train.lr=0.0001 --train.epochs=400
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
+--log.group=betavae_shapes3d_lr-0.00003 --train.seed=2 --train.lr=0.00003 --train.epochs=400
