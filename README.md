@@ -85,7 +85,7 @@ This repository was tested and evaluated using
 
 and a suitable conda environment can be set up by running `conda env create -f environment.yaml`
 
-If you wish to utilize logging with Weights & Biases (highly recommended!), simply visit https://wandb.ai to set up an account. Then simply run `wandb login` and enter your passkey. Alternatively, enter your key using `--log.wandb_key=<your_key>` when training, or simply set it directly in `parameters.py/WANDB_DEFAULT_KEY`.
+If you wish to utilize logging with Weights & Biases (highly recommended!), simply visit https://wandb.ai to set up an account. Then enter your key using `--log.wandb_key=<your_key>` when training, or simply set it directly in `parameters.py/WANDB_DEFAULT_KEY`.
 
 If you want to make use of the automatic data download, you will also have to install `curl` on your machine, e.g. via `sudo apt install curl` on a `linux` machine.
 
@@ -355,7 +355,7 @@ $$
 with factors of variation $c_1$ and $c_2$. Given this block, we call this set of constraints `shapes3d_single_1_01`. A correlations-`.yaml`-file can contain multiple possible correlations, and can be used to adjust training protocols with one simple additional command:
 
 ```bash
-python base_main.py --config-file=configs/examples/montero_betavae_shapes3d.yaml \
+python base_main.py --config-file=configs/examples/betavae_shapes3d.yaml \
 --constraints.correlations_file=constraints/avail_correlations.yaml:shapes3d_single_1_01
 ```
 

@@ -24,4 +24,5 @@ dependencies:
     - h5py
     - terminaltables
     - pyitlib
+    - submitit==1.4.5
     - -e .

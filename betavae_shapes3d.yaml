@@ -1,0 +1,30 @@
+run:
+    restore_from: continue
+    visualize: append
+    do: ['train','eval','visualize']
+    gpu_id: 0
+log:
+    project: simple_betavae
+    group: betavae_shapes3d
+    wandb_mode: run
+    level: info
+data:
+    name: shapes3d
+    num_workers: 12
+train:
+    epochs: 50
+    lr: 0.0001
+    batch_size: 64
+    checkpoint_every: 100
+    loss: betavae
+    rec_dist: bernoulli
+betavae:
+    beta: 16
+    log_components: False
+model:
+    name: vae_locatello
+vae_locatello:
+    latent_dim: 10
+eval:
+    batch_size: 1024
+    mode: last
