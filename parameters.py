@@ -83,7 +83,7 @@ Section('model', 'all model-related parameters').params(
     decoder_decay=Param(float, 'L2 Decay on decoder', default=0.))
 
 Section('data', 'all data-related parameters').params(
-    name=Param(str, 'dataset name', default='mnist'),
+    name=Param(str, 'dataset name', default='shapes3d'),
     root=Param(str, 'optional root to dataset', default='n/a'),
     k_range=Param(utils.List(), 'number of UNshared factors of variation. k_range = [k_min, k_max]. If k_max = -1 -> k_max = num_factors_of_variation - 1', default=[1,-1]),
     pair_index=Param(str, 
